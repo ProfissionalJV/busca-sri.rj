@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE RESPONSIVA - ESCALA PROPORCIONAL */
+html {
+    font-size: calc(100vw / 768 * 16px);
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.12), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08), transparent 40%),
+        linear-gradient(135deg, #0a1f3c, #163a63, #2b6cb0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* CONTAINER */
+.container {
+    width: 45rem; /* 720px */
+    max-width: 100%;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(28px);
+    border-radius: 1.75rem;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 1.5625rem 4.375rem rgba(0,0,0,0.45);
+    overflow: hidden;
+}
+
+/* HEADER */
+.main-header {
+    text-align: center;
+    padding: 2.5rem 1.5rem 1.875rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.header-top {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1.25rem;
+}
+
+.main-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* INFO BOX */
+.info-box {
+    margin: 0 1.5rem 0.625rem;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+}
+
+.info-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+}
+
+.info-box p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.info-highlight {
+    margin-top: 0.9375rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-highlight span {
+    background: rgba(255,255,255,0.15);
+    padding: 0.3125rem 0.75rem;
+    border-radius: 1.25rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.info-footer {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+}
+
+/* SEARCH */
+.search-box {
+    display: flex;
+    gap: 0.625rem;
+    padding: 1rem 1.5rem;
+}
+
+.search-wrapper {
+    flex: 1;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.875rem;
+    border-radius: 0.875rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+}
+
+#searchInput::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+#searchBtn {
+    padding: 0 1.5rem;
+    border-radius: 0.875rem;
+    border: none;
+    background: linear-gradient(135deg, #4da3ff, #7ec8ff);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* SUGESTÕES */
+.suggestions {
+    margin: 0 1.5rem;
+    margin-top: -0.375rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.625rem 0.25rem;
+}
+
+.suggestion-item {
+    padding: 0.5rem 0.875rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* TOTAL COUNT */
+.total-count {
+    padding: 0.625rem 1.5rem 0.3125rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* LISTA DE CERTIFICADOS */
+.certificates-list {
+    padding: 0.75rem 1.25rem 1.25rem;
+    max-height: 45vh;
+    overflow-y: auto;
+}
+
+/* CERTIFICATE ITEM */
+.certificate-item {
+    display: flex;
+    gap: 0.9375rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 0.625rem;
+    transition: all 0.2s;
+}
+
+.certificate-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+}
+
+.certificate-info {
+    flex: 1;
+}
+
+.certificate-info h3 {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0.375rem;
+}
+
+.date {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.625rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.date img {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+/* BOTÕES DE AÇÃO */
+.certificate-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    border: none;
+    border-radius: 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    transition: all 0.2s;
+}
+
+.action-btn img {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.view-btn { background: rgba(77, 163, 255, 0.3); }
+.download-btn { background: rgba(72, 187, 120, 0.3); }
+.print-btn { background: rgba(237, 137, 54, 0.3); }
+
+/* FOOTER - LOGOS LADO A LADO */
+footer {
+    padding: 1.25rem;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0.9375rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.footer-logos img {
+    height: 3.125rem;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+footer p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.75rem;
+}
+
+/* MODAL */
+.pdf-viewer {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.viewer-content {
+    width: 90%;
+    height: 90%;
+    max-width: 56.25rem;
+    background: rgba(10, 31, 60, 0.98);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255,255,255,0.18);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.viewer-header h3 {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    flex: 1;
+    margin-right: 0.75rem;
+}
+
+#closeViewerBtn {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#pdfFrame {
+    flex: 1;
+    border: none;
+    background: white;
+}
+
+#printBtn {
+    margin: 0.75rem;
+    padding: 0.625rem;
+    background: linear-gradient(135deg, #4da3ff, #7ec8ff);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 767px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    #searchBtn {
+        padding: 0.75rem;
+        width: 100%;
+    }
+    
+    .certificate-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .certificate-icon {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .date {
+        justify-content: center;
+    }
+    
+    .certificate-actions {
+        justify-content: center;
+    }
+    
+    /* LOGOS CONTINUAM LADO A LADO */
+    .footer-logos {
+        gap: 1.25rem;
+    }
+    
+    .footer-logos img {
+        height: 2.5rem;
+    }
+    
+    .viewer-content {
+        width: 95%;
+        height: 95%;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<title>Certificados de Doação</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="main-header">
+
+    <div class="header-top">
+        <span>Governo Federal</span>
+        <span>Ministério das Comunicações</span>
+    </div>
+
+    <h1>Certificados de Doação</h1>
+
+    <p class="subtitle">
+        Programa Computadores para Inclusão
+    </p>
+
+</header>
+
+<section class="info-box">
+    <h2>
+        <img src="assets/pdf.png" alt="Certificado" class="icon-medium">
+        Encontre seu certificado de doação
+    </h2>
+
+    <p>
+        Espaço exclusivo para os <strong>Pontos de Inclusão Digital</strong> participantes da 
+        <strong>18ª Caravana Federativa</strong> (Rio de Janeiro, 25 a 26 de março) acessarem 
+        seus certificados de doação do <strong>Programa Computadores para Inclusão</strong>.
+    </p>
+
+    <p>
+        Digite o nome da sua instituição abaixo para localizar o documento.
+    </p>
+
+    <div class="info-highlight">
+        <span>✔ Visualizar</span>
+        <span>✔ Baixar</span>
+        <span>✔ Imprimir</span>
+    </div>
+
+    <p class="info-footer">
+        Caso não encontre, tente buscar sem acentos ou revise a digitação.
+    </p>
+</section>
+
+<div class="search-box">
+
+    <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="Digite o nome da instituição...">
+    </div>
+
+    <button id="searchBtn">Buscar</button>
+
+</div>
+
+<!-- SUGESTÕES -->
+<div id="suggestions" class="suggestions"></div>
+
+<div class="total-count" id="totalCount"></div>
+
+<div class="certificates-list" id="certificatesList">
+    <div class="loading">Carregando certificados...</div>
+</div>
+
+<footer>
+    <div class="footer-logos">
+        <img src="assets/programa.png" alt="Programa Computadores para Inclusão">
+        <img src="assets/mcom.png" alt="Ministério das Comunicações">
+    </div>
+</footer>
+
+</div>
+
+<!-- MODAL PDF -->
+<div class="pdf-viewer" id="pdfViewer">
+    <div class="viewer-content">
+
+        <div class="viewer-header">
+            <h3 id="pdfTitle"></h3>
+            <button id="closeViewerBtn">✕</button>
+        </div>
+
+        <iframe id="pdfFrame"></iframe>
+
+        <button id="printBtn">Imprimir</button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
